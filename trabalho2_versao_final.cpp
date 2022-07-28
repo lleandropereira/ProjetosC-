@@ -2,7 +2,7 @@
 //  main.cpp
 //  Trabalho2
 //
-//  Created by Leandro Pereira, Cristian Marinano e Wayne Junior on 15/07/22.
+//  Created by Leandro Pereira on 15/07/22.
 //
 
 #include <iostream>
@@ -32,7 +32,7 @@ int main()
             }
         }while(gabarito[i]<'A' or gabarito[i]>'E');
     }
-    //-------------------------------------------------------------------------------------
+    
     valor_da_questao=10.0/M; //calculo do valor das questoes
     
     for(j=0;j<N;j++) //entrada dos dados dos candidatos
@@ -68,11 +68,11 @@ int main()
             cont_desclassificado++;
         }
     }
-    //-------------------------------------------------------------------------------------
+    
     //dados de saida
     cout<<"--------------------------------------\n";
     cout<<"Relatorio geral:\n";
-    cout<<"Nome\tNota"<<endl; //item B, relatorio do nome e da nota
+    cout<<"Nome\tNota"<<endl; //relatorio do nome e da nota
     for(j=0;j<N;j++)
     {
         cout<<nome[j]<<"\t"<<nota[j]<<endl;
@@ -80,11 +80,11 @@ int main()
     
     cout<<"--------------------------------------\n";
     
-    cout<<"Media geral dos candidatos: "<<soma_media/N<<endl; //item C, media geral dos candidatos
+    cout<<"Media geral dos candidatos: "<<soma_media/N<<endl; //media geral dos candidatos
     
     cout<<"--------------------------------------\n";
     
-    cout<<"Percentual dos candidatos classificados e desclassificados:\n\n"; //item D, percentual de classificados
+    cout<<"Percentual dos candidatos classificados e desclassificados:\n\n"; //percentual de classificados
     perc_classificado=cont_classificado*100.0/N;
     perc_desclassificado=cont_desclassificado*100.0/N;
     
@@ -93,7 +93,7 @@ int main()
     
     cout<<"--------------------------------------\n";
     
-    cout<<"Lista dos candidatos aprovados:\n"; //item E, lista dos aprovados, fiz apenas com o nome
+    cout<<"Lista dos candidatos aprovados:\n"; //lista dos aprovados, apenas com o nome
     for(j=0;j<N;j++)
     {
         if(nota[j]>=5)
@@ -103,7 +103,7 @@ int main()
     }
     cout<<"--------------------------------------\n";
 
-    cout<<"Melhor nota e nome do candidato:\n"; //item F, candidato com a melhor nota
+    cout<<"Melhor nota e nome do candidato:\n"; //candidato com a melhor nota
     for(j=0;j<N;j++)
     {
         if(nota[j]>=melhor_nota)
